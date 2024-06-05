@@ -1,0 +1,24 @@
+﻿<Window x:Class="AsgardGym.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login" Height="200" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="5" VerticalAlignment="Center">Korisničko ime:</TextBlock>
+        <TextBox x:Name="KorisnickoImeTextBox" Grid.Row="0" Grid.Column="1" Margin="5" Width="200" />
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="5" VerticalAlignment="Center">Lozinka:</TextBlock>
+        <PasswordBox x:Name="LozinkaPasswordBox" Grid.Row="1" Grid.Column="1" Margin="5" Width="200" />
+
+        <Button Grid.Row="2" Grid.Column="1" Margin="5" Width="100" HorizontalAlignment="Right" Click="Login_Click">Login</Button>
+    </Grid>
+</Window>
