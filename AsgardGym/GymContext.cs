@@ -22,8 +22,13 @@ namespace AsgardGym
         {
             modelBuilder.Entity<UslugaKorisnika>()
                 .HasKey(uk => new { uk.KorisnikID, uk.UslugaID, uk.DatumKoristenja });
+
+            modelBuilder.Entity<Admin>()
+            .HasIndex(a => a.KorisnickoIme)
+            .IsUnique();
         }
 
-       
+
     }
 }
+

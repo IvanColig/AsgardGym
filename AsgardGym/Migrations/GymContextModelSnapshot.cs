@@ -33,6 +33,9 @@ namespace AsgardGym.Migrations
 
                     b.HasKey("AdminID");
 
+                    b.HasIndex("KorisnickoIme")
+                        .IsUnique();
+
                     b.ToTable("Admini");
                 });
 

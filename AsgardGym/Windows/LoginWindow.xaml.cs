@@ -18,11 +18,12 @@ namespace AsgardGym.Windows
             string korisnickoIme = KorisnickoImeTextBox.Text;
             string lozinka = LozinkaPasswordBox.Password;
 
+            Debug.WriteLine($"Korisničko ime: {korisnickoIme}");
+            Debug.WriteLine($"Lozinka: {lozinka}");
+
             try
             {
-                bool ispravanLogin = ProvjeriLogin(korisnickoIme, lozinka);
-
-                if (ispravanLogin)
+                if (ProvjeriLogin(korisnickoIme, lozinka))
                 {
                     MessageBox.Show("Uspješan login!");
                     var homeWindow = new HomeWindow();
@@ -43,42 +44,38 @@ namespace AsgardGym.Windows
 
         private static bool ProvjeriLogin(string korisnickoIme, string lozinka)
         {
-            try 
+            try
             {
                 using (var context = new GymContext())
                 {
-                    
                     Debug.WriteLine($"Provjera prijave za korisnickoIme: {korisnickoIme}");
 
                     var admin = context.Admini.FirstOrDefault(a => a.KorisnickoIme == korisnickoIme);
+                    Debug.WriteLine(context.Admini.Count());
 
-                    if (admin != null)
+                    if (admin == null)
                     {
-                        Debug.WriteLine($"Pronađen korisnik: {admin.KorisnickoIme}");
-                        if (admin.Lozinka == lozinka)
-                        {
-                            Debug.WriteLine("Lozinka točna");
-                            return true;
-                        }
-                        else
-                        {
-                            Debug.WriteLine("Pogrešna lozinka");
-                        }
+                        Debug.WriteLine("Korisnik nije pronađen");
+                        return false;
+                    }
+
+                    if (admin.Lozinka == lozinka)
+                    {
+                        Debug.WriteLine("Lozinka točna");
+                        return true;
                     }
                     else
                     {
-                        Debug.WriteLine("Korisnik nije pronađen");
+                        Debug.WriteLine("Pogrešna lozinka");
+                        return false;
                     }
-
-                    return false;
                 }
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"Došlo je do greške prilikom provjere prijave: {ex.Message}");
-                throw;
+                throw new Exception("Greška prilikom pristupa bazi podataka.", ex);
             }
         }
     }
-
 }

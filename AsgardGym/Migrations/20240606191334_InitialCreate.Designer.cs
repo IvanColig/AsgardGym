@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AsgardGym.Migrations
 {
     [DbContext(typeof(GymContext))]
-    [Migration("20240605123554_InitialCreate")]
+    [Migration("20240606191334_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -35,6 +35,9 @@ namespace AsgardGym.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("AdminID");
+
+                    b.HasIndex("KorisnickoIme")
+                        .IsUnique();
 
                     b.ToTable("Admini");
                 });

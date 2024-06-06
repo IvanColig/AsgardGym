@@ -102,6 +102,12 @@ namespace AsgardGym.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Admini_KorisnickoIme",
+                table: "Admini",
+                column: "KorisnickoIme",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Posjete_KorisnikID",
                 table: "Posjete",
                 column: "KorisnikID");
