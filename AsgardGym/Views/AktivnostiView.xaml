@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="AsgardGym.Views.AktivnostiView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <!-- Dodajte elemente za prikaz aktivnosti -->
+        <TextBlock Text="Prikaz aktivnosti" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+</UserControl>

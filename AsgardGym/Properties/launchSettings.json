@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AsgardGym": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\Ivan\\Desktop\\AsgardGym\\AsgardGym"
+    }
+  }
+}

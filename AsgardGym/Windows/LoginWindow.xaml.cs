@@ -25,7 +25,6 @@ namespace AsgardGym.Windows
             {
                 if (ProvjeriLogin(korisnickoIme, lozinka))
                 {
-                    MessageBox.Show("Uspješan login!");
                     var homeWindow = new HomeWindow();
                     homeWindow.Show();
                     this.Close();
