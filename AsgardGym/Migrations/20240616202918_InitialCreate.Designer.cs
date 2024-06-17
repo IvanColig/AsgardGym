@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AsgardGym.Migrations
 {
     [DbContext(typeof(GymContext))]
-    [Migration("20240606191334_InitialCreate")]
+    [Migration("20240616202918_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -94,6 +94,9 @@ namespace AsgardGym.Migrations
                 {
                     b.Property<int>("UslugaID")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Cijena")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Naziv")

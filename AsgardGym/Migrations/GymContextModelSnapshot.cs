@@ -93,6 +93,9 @@ namespace AsgardGym.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("Cijena")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Naziv")
                         .IsRequired()
                         .HasColumnType("TEXT");

@@ -49,7 +49,8 @@ namespace AsgardGym.Migrations
                     UslugaID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Naziv = table.Column<string>(type: "TEXT", nullable: false),
-                    Opis = table.Column<string>(type: "TEXT", nullable: false)
+                    Opis = table.Column<string>(type: "TEXT", nullable: false),
+                    Cijena = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

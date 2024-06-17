@@ -25,7 +25,7 @@ namespace AsgardGym.Windows
             {
                 if (ProvjeriLogin(korisnickoIme, lozinka))
                 {
-                    var homeWindow = new HomeWindow();
+                    var homeWindow = new HomeWindow(korisnickoIme);
                     homeWindow.Show();
                     this.Close();
                 }

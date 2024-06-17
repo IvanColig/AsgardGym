@@ -3,23 +3,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:AsgardGym.Views"
         Title="HomeWindow" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
 
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/odinBG.jpg" />
         </Grid.Background>
         <DockPanel LastChildFill="True">
-            <!-- Header -->
             <DockPanel DockPanel.Dock="Top" Background="Transparent">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                    <Button Name="BtnKorisnici" Content="Korisnici" Width="100" Height="25" Margin="10" Click="BtnKorisnici_Click"/>
-                    <Button Name="BtnAktivnosti" Content="Aktivnosti" Width="100" Height="25" Margin="10" Click="BtnAktivnosti_Click"/>
+                    <Button Name="BtnKorisnici" Content="Korisnici" Width="100" Height="30" Margin="10" Click="BtnKorisnici_Click"/>
+                    <Button Name="BtnAktivnosti" Content="Usluge" Width="100" Height="30" Margin="10" Click="BtnUsluge_Click"/>
                 </StackPanel>
-                <Button Name="BtnLogOut" Content="Log out" Width="100" Height="25" Margin="10" HorizontalAlignment="Right" DockPanel.Dock="Right" Click="BtnLogOut_Click"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Border Background="BlanchedAlmond" BorderBrush="Black" BorderThickness="1" Margin="10" Padding="5"  HorizontalAlignment="Right">
+                        <TextBlock Name="KorisnickoImeTextBlock" Foreground="Black"/>
+                    </Border>
+                    <Button Name="BtnLogOut" Content="Odjava" Width="100" Height="30" Margin="10" HorizontalAlignment="Right" DockPanel.Dock="Right" Click="BtnLogOut_Click"/>
+                </StackPanel>
             </DockPanel>
-
-            <!-- Content area -->
+            
             <ContentControl Name="ContentArea" Background="Transparent"/>
         </DockPanel>
     </Grid>
