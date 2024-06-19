@@ -1,0 +1,45 @@
+﻿<Window x:Class="AsgardGym.Windows.UslugeKorisnikaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="Usluge Korisnika" Height="400" Width="600">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="DarkGreen" Height="50" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+            <TextBlock Text="Usluge korisnika: " Foreground="White" FontWeight="Bold" Margin="10"/>
+            <TextBlock x:Name="ImePrezimeTextBlock" Foreground="White" FontWeight="Bold" Margin="10" FontSize="18"/>
+        </StackPanel>
+
+        <ListBox Grid.Row="1" x:Name="UslugeListBox" Margin="10" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Naziv}" Margin="5"/>
+                        <TextBlock Text="{Binding Cijena, StringFormat=' - {0} €'}" Margin="5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button Content="Dodaj" Click="DodajUslugu_Click" Width="100" Margin="5"/>
+            <Button Content="Ukloni" Click="UkloniUslugu_Click" Width="100" Margin="5"/>
+            <Button Content="Natrag" Click="Natrag_Click" Width="100" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+            <TextBlock Text="Ukupno: " FontWeight="Bold"/>
+            <TextBlock x:Name="UkupnoTextBlock" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>

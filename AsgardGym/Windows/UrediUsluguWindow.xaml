@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AsgardGym.Windows"
         mc:Ignorable="d"
-        Title="Uredi Uslugu" Height="230" Width="400"
+        Title="Uredi Uslugu" Height="240" Width="400"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
 
@@ -31,7 +31,7 @@
         <TextBox x:Name="CijenaTextBox" Grid.Row="2" Grid.Column="1" Margin="5" Height="25" Width="200" />
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Prihvati" Width="75" Height="30" Margin="5" Click="Prihvati_Click"/>
+            <Button Content="Potvrdi" Width="75" Height="30" Margin="5" Click="Potvrdi_Click"/>
             <Button Content="Odustani" Width="75" Height="30" Margin="5" Click="Odustani_Click"/>
         </StackPanel>
     </Grid>

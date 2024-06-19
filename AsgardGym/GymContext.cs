@@ -21,7 +21,7 @@ namespace AsgardGym
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UslugaKorisnika>()
-                .HasKey(uk => new { uk.KorisnikID, uk.UslugaID, uk.DatumKoristenja });
+                .HasKey(uk => new { uk.KorisnikID, uk.UslugaID});
 
             modelBuilder.Entity<Admin>()
             .HasIndex(a => a.KorisnickoIme)

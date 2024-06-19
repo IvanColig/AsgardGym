@@ -117,10 +117,7 @@ namespace AsgardGym.Migrations
                     b.Property<int>("UslugaID")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("DatumKoristenja")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("KorisnikID", "UslugaID", "DatumKoristenja");
+                    b.HasKey("KorisnikID", "UslugaID");
 
                     b.HasIndex("UslugaID");
 

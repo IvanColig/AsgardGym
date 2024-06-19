@@ -21,18 +21,20 @@ namespace AsgardGym.Windows
         }
         private void BtnKorisnici_Click(object sender, RoutedEventArgs e)
         {
-            
-            ContentArea.Content = new KorisniciView();
+            var korisniciView = new KorisniciView();
+            korisniciView.GotovoClicked += GotovoClicked;
+            ContentArea.Content = korisniciView;
         }
 
         private void BtnUsluge_Click(object sender, RoutedEventArgs e)
         {
 
             var uslugeView = new UslugeView();
-            uslugeView.GotovoClicked += UslugeView_GotovoClicked;
+            uslugeView.GotovoClicked += GotovoClicked;
             ContentArea.Content = uslugeView;
         }
-        private void UslugeView_GotovoClicked(object sender, EventArgs e)
+
+        private void GotovoClicked(object sender, EventArgs e)
         {
             ContentArea.Content = null;
         }

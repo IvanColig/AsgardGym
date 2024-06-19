@@ -12,7 +12,7 @@ namespace AsgardGym.Models
         public string Prezime { get; set; }
         public DateTime DatumRodenja { get; set; }
         public string Email { get; set; }
-        public int Telefon { get; set; }
+        public string Telefon { get; set; }
 
         public ICollection<Posjeta> Posjete { get; set; }
         public ICollection<UslugaKorisnika> UslugeKorisnika { get; set; }

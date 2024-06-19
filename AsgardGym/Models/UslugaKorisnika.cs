@@ -8,7 +8,6 @@ namespace AsgardGym.Models
     {
         public int KorisnikID { get; set; }
         public int UslugaID { get; set; }
-        public DateTime DatumKoristenja { get; set; }
 
         [ForeignKey("KorisnikID")]
         public Korisnik Korisnik { get; set; }

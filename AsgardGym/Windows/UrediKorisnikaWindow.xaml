@@ -1,0 +1,46 @@
+﻿<Window x:Class="AsgardGym.Windows.UrediKorisnikaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsgardGym.Windows"
+        mc:Ignorable="d"
+        Title="Dodaj Korisnika" Height="320" Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="5" VerticalAlignment="Center">Ime:</TextBlock>
+        <TextBox x:Name="ImeTextBox" Grid.Row="0" Grid.Column="1" Margin="5" Height="25" Width="200" />
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="5" VerticalAlignment="Center">Prezime:</TextBlock>
+        <TextBox x:Name="PrezimeTextBox" Grid.Row="1" Grid.Column="1" Margin="5" Height="25" Width="200" />
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="5" VerticalAlignment="Center">Datum Rođenja:</TextBlock>
+        <TextBox x:Name="DatumRodenjaTextBox" Grid.Row="2" Grid.Column="1" Margin="5" Height="25" Width="200" />
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="5" VerticalAlignment="Center">Email:</TextBlock>
+        <TextBox x:Name="EmailTextBox" Grid.Row="3" Grid.Column="1" Margin="5" Height="25" Width="200" />
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="5" VerticalAlignment="Center">Telefon:</TextBlock>
+        <TextBox x:Name="TelefonTextBox" Grid.Row="4" Grid.Column="1" Margin="5" Height="25" Width="200" />
+
+        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Potvrdi" Width="75" Height="30" Margin="5" Click="Potvrdi_Click"/>
+            <Button Content="Odustani" Width="75" Height="30" Margin="5" Click="Odustani_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

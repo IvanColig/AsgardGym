@@ -21,7 +21,7 @@ namespace AsgardGym.Windows
             CijenaTextBox.Text = usluga.Cijena.ToString();
         }
 
-        private void Prihvati_Click(object sender, RoutedEventArgs e)
+        private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
             string naziv = NazivTextBox.Text;
             string opis = OpisTextBox.Text;

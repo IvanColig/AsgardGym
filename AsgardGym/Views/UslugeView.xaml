@@ -8,7 +8,7 @@
     
     
         <Grid>
-        <DataGrid x:Name="UslugeDataGrid" AutoGenerateColumns="False" IsReadOnly="True" Margin="10" SelectionMode="Extended">
+        <DataGrid x:Name="UslugeDataGrid" AutoGenerateColumns="False" IsReadOnly="True" Margin="10" SelectionMode="Extended" Width="700" HorizontalAlignment="Left">
             <DataGrid.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="Black" Offset="-1"/>
@@ -18,7 +18,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Naziv" Binding="{Binding Naziv}" Width="*"/>
                 <DataGridTextColumn Header="Opis" Binding="{Binding Opis}" Width="*"/>
-                <DataGridTextColumn Header="Cijena" Binding="{Binding Cijena}" Width="*"/>
+                <DataGridTextColumn Header="Cijena" Binding="{Binding Cijena, StringFormat=€ {0}}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
 

@@ -67,10 +67,7 @@ namespace AsgardGym.Views
                 _context.SaveChanges();
                 LoadData();
             }
-            else
-            {
-                MessageBox.Show("Odaberite uslugu za brisanje.");
-            }
+            
         }
 
         private void Gotovo_Click(object sender, RoutedEventArgs e)

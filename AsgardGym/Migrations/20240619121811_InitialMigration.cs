@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AsgardGym.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -82,12 +82,11 @@ namespace AsgardGym.Migrations
                 columns: table => new
                 {
                     KorisnikID = table.Column<int>(type: "INTEGER", nullable: false),
-                    UslugaID = table.Column<int>(type: "INTEGER", nullable: false),
-                    DatumKoristenja = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    UslugaID = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UslugeKorisnika", x => new { x.KorisnikID, x.UslugaID, x.DatumKoristenja });
+                    table.PrimaryKey("PK_UslugeKorisnika", x => new { x.KorisnikID, x.UslugaID });
                     table.ForeignKey(
                         name: "FK_UslugeKorisnika_Korisnici_KorisnikID",
                         column: x => x.KorisnikID,
