@@ -14,7 +14,8 @@
             <DockPanel DockPanel.Dock="Top" Background="Transparent">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                     <Button Name="BtnKorisnici" Content="Korisnici" Width="100" Height="30" Margin="10" Click="BtnKorisnici_Click"/>
-                    <Button Name="BtnAktivnosti" Content="Usluge" Width="100" Height="30" Margin="10" Click="BtnUsluge_Click"/>
+                    <Button Name="BtnUsluge" Content="Usluge" Width="100" Height="30" Margin="10" Click="BtnUsluge_Click"/>
+                    <Button Name="BtnPosjete" Content="Posjete" Width="100" Height="30" Margin="10" Click="BtnPosjete_Click"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <Border Background="BlanchedAlmond" BorderBrush="Black" BorderThickness="1" Margin="10" Padding="5"  HorizontalAlignment="Right">

@@ -49,5 +49,12 @@ namespace AsgardGym.Windows
                 this.Close();
             }
         }
+
+        private void BtnPosjete_Click(object sender, RoutedEventArgs e)
+        {
+            var prisutnostView = new PrisutnostView();
+            prisutnostView.GotovoClicked += GotovoClicked;
+            ContentArea.Content = prisutnostView;
+        }
     }
 }

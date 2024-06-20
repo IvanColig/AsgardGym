@@ -68,6 +68,7 @@ namespace AsgardGym.Windows
                         _context.UslugeKorisnika.Remove(uslugaKorisnika);
                         _context.SaveChanges();
                         PrikaziPodatke();
+                        IzracunajUkupno();
                     }
                 }
             }
